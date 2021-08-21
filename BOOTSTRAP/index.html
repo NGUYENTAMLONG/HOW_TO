@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOTSTRAP</title>
+    <link rel="stylesheet" href="index.css">
+ <style>
+  
+ </style>
+
+</head>
+<body>
+    <div class="circle"></div>
+
+    <div class="header">
+
+        <div class="left">
+            <img src="img/logo.png" alt="logo" class="logo">
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="#" class="font-effect-neon" >Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+   
+    </div>
+    <div class="body">
+        <div class="bd-left">
+            <h1>It's not just Coffee</h1>
+            <h1>
+                It's <span>Starbucks</span>
+            </h1>
+            <p>
+                Starbucks là một thương hiệu cà phê nổi tiếng trên thế giới.<br> Hãng cà phê Starbucks có trụ sở chính ở Seattle, Washington, Hoa Kỳ;<br> ngoài ra, hãng có hơn 23.000 quán ở 64 quốc gia
+               <br> Sứ mệnh của chúng tôi: khơi nguồn cảm hứng và nuôi dưỡng tinh thần con người – một người,<br> một cốc cà phê và một tình hàng xóm vào một thời điểm.
+            </p>
+            <button>LEARN MORE</button>
+        </div>
+        <div class="bd-right">
+          <!-- <div class="moon">
+
+          </div> -->
+          <img class="thumb" src="img/img1.png" style=" transform: rotate(-30deg) " width="320px"  alt="">
+        </div>
+      
+    </div>
+    <div class="footer">
+        <ul>
+           <li> <img src="img/thumb1.png" onclick="Avatar('img/img1.png','#017143')" alt=""> </li>
+           <li> <img src="img/thumb2.png" onclick="Avatar('img/img2.png','#EB7395')" alt=""> </li>
+           <li> <img src="img/thumb3.png"  style=" transform: rotate(-10deg); margin-bottom: 10px;" width="115px" onclick="Avatar('img/img3.png','#CC4DA3')" alt=""> </li>
+           <li> <img width="100px" style=" transform: rotate(-10deg); " src="img/image.png" onclick="Avatar('img/image.png','#F2D325')" alt=""> </li>
+
+        </ul>
+    </div>
+</body>
+<script>
+   function Avatar(img,bg){
+       var image = document.querySelector(".thumb");
+       var circle = document.querySelector(".circle");
+       image.setAttribute("src",img);
+       circle.style.backgroundColor=bg;
+   }
+</script>
+</html>

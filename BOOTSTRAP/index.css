@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    position: relative;
+}
+.logo{
+    /* margin-top: 5px; */
+}
+.header{
+   display: flex;
+   background-color: aqua;
+   width: 100%;
+   justify-content: space-between;
+
+ }
+.header .left{
+    margin-left: 100px;
+     
+}
+.header .right {
+     display: flex;
+    justify-content: center;
+    align-items: center;  
+    margin-right: 100px;
+}
+.header .right ul{
+    display: flex;
+}
+.header .right li{
+    list-style: none;
+    padding: 4px 20px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.right ul li a{
+    color: #404040;
+    text-decoration: none;
+    transition: .5s;
+}
+.right ul li a:hover{
+   font-size: 25px;
+}
+
+/* BODY */
+.body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    justify-content: space-around;
+}
+.bd-left h1{
+    margin: 20px 0px;
+    color: #404040;
+   font-size: 50px;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.bd-left span{
+    font-size: 60px;
+    color: #037046;
+}
+.bd-left p{
+   font-family: 'Righteous', cursive;
+   color: #404040;
+}
+.bd-left button {
+    margin-top: 20px;
+    height: 50px;
+    padding: 2px 25px;
+    background-color: #017143;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+   font-family: 'Righteous', cursive;
+
+}
+
+
+.bd-right{
+  
+}
+.bd-right .moon{
+    height:  1000px;
+    width: 1000px;
+    background-color: #EB7395;
+    border-radius: 50%;
+}
+
+
+
+
+.footer{
+    width: 100%;
+    position: absolute;
+    bottom: -50px ;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.footer ul{
+    display: flex;
+}
+.footer li{
+    list-style: none;
+    zoom: 0.8;
+    cursor: pointer;
+    margin: 30px 30px;
+    transition: .5s;
+    
+}
+.footer li:hover{
+ transform: translateY(-15px);
+   
+}
+.circle{
+    position: absolute;
+    top: 51px;
+    left: 0;
+width: 100%;
+height: 100%;
+background-color: #017143;
+clip-path:  circle(600px at right 650px);
+
+}
+
+
+
+
+
+
