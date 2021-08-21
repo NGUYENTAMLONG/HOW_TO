@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.vertical{
+    width: 90px; 
+    background-color: #555555;
+}
+
+
+.vertical a{
+    padding: 16px;
+    color: white;
+
+    font-size: 30px;
+    transition: all 0.3s ease;
+    display: block;
+    text-align: center;
+    font-size: 36px; 
+
+}
+
+.vertical a:hover {
+    background-color: #000; /* Add a hover color */
+  }
+.active {
+    background-color: #4CAF50; /* Add an active/current color */
+  }
+.horizontal{
+    width: 430px;
+    
+}
+.horizontal a {
+   width: 20%;
+    padding: 16px ;
+    background-color: #555;
+    font-size: 35px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    float: left;
+    align-items: center;
+
+}
+.horizontal a:hover {
+  background-color: black;
+}
+.active{
+    background-color: #4CAF50 !important;
+  }
+
+
+
+
+  /* bar */
+  .bars{
+    height: 90px;
+    width: 90px;
+
+    margin-left: -500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.bars .bar{
+  height: 10px;
+  width: 70px;
+  background-color: black;
+  /* transition: 2s; */
+}
+.bars{
+  transition: 1s;
+  cursor: pointer;
+}
+.bars .bar{ 
+ transition: 1s;
+}
+.bars:hover {
+
+}
+.change #b1{
+  transform: rotate(-45deg) translate(-20px, 13px);
+}
+.change #b2{
+ 
+display: none;
+}
+.change #b3{
+ 
+ 
+  transform: rotate(45deg) translate(-20px, -13px);
+}
+ 

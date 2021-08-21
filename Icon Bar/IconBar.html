@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Bar</title>
+    <link rel="stylesheet" href="IconBar.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"></head>
+<body>
+    
+    <div class="vertical" style="float: left;margin: 30px;">
+   
+                <a href="#" class="active">
+
+                
+                <i class="fa fa-home" aria-hidden="true"></i>    
+            </a>
+         
+                <a href="#">
+
+                
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+         
+                <a href="#">
+
+                
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+            </a>
+         
+                <a href="#">
+
+                
+                <i class="fa fa-globe" aria-hidden="true"></i>
+            </a>
+         
+                <a href="#">
+
+                
+                <i class="fa fa-trash" aria-hidden="true"></i>
+            </a>
+    
+    </div>
+     
+    <div class="horizontal" style="float: right;margin: 30px;">
+   
+        <a href="#">
+
+        
+        <i class="fa fa-home" aria-hidden="true"></i>    
+    </a>
+ 
+        <a href="#"  class="active">
+
+        
+        <i class="fa fa-search" aria-hidden="true"></i>
+    </a>
+ 
+        <a href="#">
+
+        
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+    </a>
+ 
+        <a href="#">
+
+        
+        <i class="fa fa-globe" aria-hidden="true"></i>
+    </a>
+ 
+        <a href="#">
+
+        
+        <i class="fa fa-trash" aria-hidden="true"></i>
+    </a>
+
+
+    <div class="bars">
+        <div class="bar" id="b1"></div>
+        <div class="bar" id="b2"></div>
+        <div class="bar" id="b3"></div>
+    </div>
+</div>
+</body>
+
+<script>
+var a = document.querySelector(".bars");
+a.onclick=function(){
+    a.classList.toggle("change");
+}
+</script>
+</html>
