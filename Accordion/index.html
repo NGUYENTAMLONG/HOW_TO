@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .accordion{
+          background-color: rgba(220, 20, 60, 0.568);
+          outline: none;
+          width: 600px;
+          height: 70px;
+          text-align: left;
+          padding-left: 30px;
+          color: white;
+          font-size: 25px;
+          font-family: tahoma;
+          cursor: pointer;
+      display: block;
+          position: relative;
+          
+     
+      }  
+      .accordion p{
+          position: absolute;
+          margin-left: auto;
+margin-right: auto;
+top: -10px;
+right: 10px;
+text-align: center;
+      }
+      .accordion:hover{
+        background-color: crimson;
+      }
+      .panel{
+        display: block;
+           width: 600px;
+          height: 70px;
+          background-color: yellow;
+         margin-top: -16px;
+         padding-top: 0px;
+
+     
+      }
+      .panel p::first-letter{
+       margin-left: 10px;
+       
+  }
+    </style>
+</head>
+<body>
+    <button class="accordion">Section 1 
+        <p>+</p>
+    
+  </button>
+<div class="panel" id="panel1">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2
+    <p>+</p>
+</button>
+<div class="panel" id="panel2">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3
+    <p>+</p>
+</button>
+<div class="panel" id="panel3">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</body>
+<script>
+    var a =document.querySelectorAll(".accordion");
+    var b =document.querySelectorAll(".panel");
+
+    b.forEach(function(bitem,index){
+      bitem.style.display="none";
+    });
+     
+      // b[0].style.display="none";
+      // b[1].style.display="none";
+      // b[2].style.display="none";
+    a.forEach(function(aitem,index){
+        aitem.onclick=function(){
+          // aitem.style.backGroundColor="rgba(220, 20, 60, 0.568)";
+        //   aitem.onmouseover=function(){
+        //   this.style.backgroundColor="crimson";
+        // }
+        // aitem.onmouseout=function(){
+        //   this.style.backgroundColor="rgba(220, 20, 60, 0.568)";
+        // }
+          if(  b[index].style.display=="none"){
+            b[index].style.display="block";
+            aitem.querySelector("p").innerHTML = "--";
+            aitem.style.backgroundColor="crimson";
+      
+          }else if(b[index].style.display="block"){
+            b[index].style.display="none";
+            aitem.querySelector("p").innerHTML = "+";
+            aitem.style.backgroundColor="rgba(220, 20, 60, 0.568)";
+          }
+        }
+      
+    });
+</script>
+</html>

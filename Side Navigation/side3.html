@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side 3 (full screen)</title>
+    <style>
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.sidenav{
+    display: flex;
+    flex-direction: column;
+    background-color: forestgreen;
+    height: 100%;
+    width: 0px;
+    overflow-x: hidden;
+    position: fixed;
+    /* transition: 1s; */
+}
+.sidenav a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: tahoma;
+    color: white;
+    padding: 24px 26px;
+    text-align: center;
+    transition: 0.5s;
+}
+.sidenav .closebtn{
+    position: absolute;
+  top: 0;
+  right: 25px;
+   display: flex;
+   justify-content: center;
+}
+.sidenav a:nth-child(2){
+margin-top: 100px;
+}
+.sidenav a:hover{
+    background-color: teal;
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="main">
+        <h2>Animated Sidenav Example Full Width</h2>
+        <p>Click on the element below to open the navigation menu.</p>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  
+      </div>
+      
+</body>
+<script>
+  var x=document.querySelector(".closebtn");
+    var open=document.querySelector("span");
+    var main = document.querySelector(".main");
+    var side = document.querySelector(".sidenav");
+    // side.style.width="0px";
+    x.onclick=function(){
+        side.style.width="0px";
+
+    }
+    open.onclick=function(){
+        side.style.width="100%";
+
+    }
+</script>
+</html>

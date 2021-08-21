@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocTESTment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .sidenav{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+    }
+    .sidenav a {
+       text-decoration: none;
+       color: white;
+       font-family: tahoma;
+       font-size: 20px;
+       padding: 24px 26px;
+       border-top-right-radius:10px ;
+       border-bottom-right-radius:10px ;
+       margin: 10px 0px;
+       width: 200px;
+       margin-left: -130px;
+       transition: 0.5s;
+    }
+    #about{
+        background-color: crimson;
+    }
+    #blog{
+        background-color: green;
+    }
+    #projects{
+        background-color: lightseagreen;
+    }
+    #contact{
+        background-color: orange;
+    }
+    a:hover{
+        margin-left: 0px;
+    }
+</style>
+<body>
+    <i class="fa fa-bandcamp fa-spin" aria-hidden="true"></i>
+<div id="mySidenav" class="sidenav">
+    <a href="#" id="about">About</a>
+    <a href="#" id="blog">Blog</a>
+    <a href="#" id="projects">Projects</a>
+    <a href="#" id="contact">Contact</a>
+  </div>
+  
+  <div style="margin-left:80px;">
+    <h2>Hoverable Sidenav Buttons</h2>
+    <p>Hover over the buttons in the left side navigation to open them.</p>
+  </div>
+     
+</body>
+<script>
+//     var a =document.querySelectorAll("a");
+// a.forEach(function(item,index){
+//      item.onmouseover=function(){
+//          item.style.marginLeft="0px";
+//      }
+//      item.onmouseout=function(){
+//          item.style.marginLeft="-130px";
+//      }
+// });
+
+</script>
+</html>

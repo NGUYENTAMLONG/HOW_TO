@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+        .search-bar{
+            background-color: rgba(220, 20, 60, 0.582);
+            overflow: hidden;
+        }
+        .search-bar .menu{
+           float: left;
+        }
+        .search-bar .menu a{
+            float: left;
+            padding: 24px 26px;
+            text-decoration: none;
+            color: forestgreen;
+            font-size: 20px;
+            font-family: tahoma;
+        }
+        .search-bar .search{
+            float: right;
+            width: 200px;
+            display: flex;
+            padding: 14px 16px;
+            margin-right: 150px;
+
+        } 
+        .search-bar .search .icon{
+            background-color: gray;
+            padding: 10px 12px;
+            color: white;
+            cursor: pointer;
+            margin-left: 1px;
+       
+
+        } 
+        .search-bar .search input{
+         font-size: 17px;
+       outline: none;
+
+        } 
+             .search-bar .menu a:hover{
+           background-color: teal;
+           color: white;
+        }
+        .active{
+            background-color: darkorange;
+            color: white !important;
+        }
+
+
+      
+    </style>
+</head>
+<body>
+    <div class="search-bar">
+        <div class="menu">
+            <a href="" class="active">
+                Home
+            </a>
+            <a href="">
+                About
+            </a>
+            <a href="">
+                Contact
+            </a>
+
+        </div>
+        <div class="search">
+            <input type="text">
+            <div class="icon">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

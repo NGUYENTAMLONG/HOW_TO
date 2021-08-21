@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            transition: 1s;
+
+
+        }
+     #myImg{
+       cursor: pointer;
+   border-radius: 10px;
+   transition: 1s;
+    }
+    #myImg:hover{
+        opacity: 0.5;
+
+    }
+    .zoom{
+       transform: scale();
+       transform: scaleX(200px);
+    }
+    span{
+        position: absolute;
+        zoom: 4;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        top: 10px;
+        right: 10px;
+        z-index: 2;
+        display: none;
+    }
+    </style>
+    
+</head>
+<body>
+    <h2>Image Modal</h2>
+<p>In this example, we use CSS to create a modal (dialog box) that is hidden by default.</p>
+<p>We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. Also note that we use the value from the image's "alt" attribute as an image caption text inside the modal.</p>
+
+<img id="myImg" class="zoom" src="https://www.w3schools.com/howto/img_snow.jpg" alt="Snow" style="width:100%;max-width:300px">
+<span class="close">&times;</span>
+</body>
+<script>
+    var myImg=document.querySelector("#myImg");
+ var body=document.querySelector("body");
+ var x=document.querySelector("span");
+    myImg.onclick=function(){
+         body.style.backgroundColor="rgba(0, 0, 0, 0.671)";
+         myImg.style.opacity="1";
+         myImg.style.transform = "scale(2.5)";
+         myImg.style.marginLeft="550px";
+         myImg.style.marginTop="150px";
+        x.style.display="block";
+    }
+   x.onclick=function(){
+         body.style.backgroundColor="";
+         myImg.style.transform = "scale(1)";
+         myImg.style.marginLeft="0px";
+         myImg.style.marginTop="0px";
+        x.style.display="none"; 
+   }
+</script>
+</html>

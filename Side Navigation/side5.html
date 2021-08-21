@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overlay</title>
+    <style>
+  *{
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+  }
+  body{
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      transition: 1s;
+  }
+  .sidenav{
+      height: 100%;
+      width: 0px;
+      background-color: crimson;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      transition: 1s;
+  }
+  .sidenav a{
+      text-decoration: none;
+      color: white;
+      font-family: tahoma;
+      font-size: 20px;
+      padding: 24px 26px;
+      transition: 1s;
+
+  }
+  .sidenav a:hover{
+   background-color: rgba(255, 255, 0, 0.637);
+
+  }
+  .sidenav .closebtn {
+     height: 50px;
+     width: 50px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-left: 190px;
+  }
+  #main{
+    transition: 1s;
+  }
+    </style>
+</head>
+<body>
+    
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+  
+  <div id="main">
+    <h2>Sidenav Push Example</h2>
+    <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a black see-through background-color to body when the sidenav is opened.</p>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  </div>
+  
+</body>
+<script>
+  var open=document.querySelector("span");
+  var x=document.querySelector(".closebtn");
+  var main=document.querySelector("#main");
+  var side=document.querySelector(".sidenav");
+open.onclick=function(){
+   side.style.width="250px";
+  main.style.marginLeft="250px";
+  document.querySelector("body").style.backgroundColor="rgba(0,0,0,0.4)";
+}
+x.onclick=function(){
+   side.style.width="0px";
+   main.style.marginLeft="0px";
+   document.querySelector("body").style.backgroundColor="white";
+
+}
+</script>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Navigation</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    .navigation{
+        width: 100%;
+        background-color: black;
+        overflow: hidden;
+      
+    }
+    .navigation a{
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        font-size: 17px;
+        padding: 14px 16px;
+        float: left;
+        ove
+       
+    }
+    .navigation a:hover{
+        background-color: brown;
+    }
+    .navigation .active{
+        background-color: rgb(134, 12, 12);
+    }
+
+    /* left-navigation */
+
+    .left-navi{
+        height: 70 vh;
+        background-color: crimson;
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+    }
+    .left-navi a{
+       padding: 24px 26px;
+        text-decoration: none;
+        color: white;
+  
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .left-navi a:hover{
+       background-color: rgba(40, 20, 220, 0.404);
+    }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <a href="#" class="active">
+            Home
+        </a>
+        <a href="#">
+            News
+        </a>
+        <a href="#">
+            Contact
+        </a>
+        <a href="#">
+            About
+        </a>
+
+    </div>
+    <div class="left-navi">
+        <a href="#" class="active">
+            Home
+        </a>
+        <a href="#">
+            News
+        </a>
+        <a href="#">
+            Contact
+        </a>
+        <a href="#">
+            About
+        </a>
+    </div>
+</body>
+</html>

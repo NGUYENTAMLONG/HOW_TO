@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  *{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+  }
+  body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+  }
+  .container{
+      height:600px;
+      width: 470px;
+      background-color: chartreuse;
+      background: url("192506638_123758433099378_6041529196831312592_n.jpg");
+  
+      position: relative;
+     
+  }
+  .img-1{
+    height:600px;
+      width: 100%;
+     position: absolute;
+      background: url("192506638_123758433099378_6041529196831312592_n.jpg");
+      background-size: cover;
+  }
+  .img-2{
+      position: absolute;
+    height:600px;
+      width: 50%;
+      background: url("192506638_123758433099378_6041529196831312592_n\ \(1\).jpg");
+      background-size: cover;
+  }
+  .bar{
+    position: relative;
+  }
+  .bar input{
+      /* position: absolute; */
+    width:470px;
+    -webkit-appearance: none;
+    z-index: -1;
+
+  }
+  .bar input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+   
+  }
+ .line{
+     position: absolute;
+     height: 600px;
+     width: 2px;
+     background-color: chartreuse;
+     position: absolute;
+    
+ }
+  /* .bar input:focus{
+    outline: none;
+  } */
+  .bar input::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.arrow{
+    position: absolute;
+   width: 25px;
+   height: 25px;
+   border-radius: 50%;
+   background-color: crimson;
+   top: 287.5px;
+   right: -11.5px;
+   cursor: col-resize;
+   display: none;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bar">
+            <input class="thumb" type="range" min="0" max="100" value="50" >
+           <div class="img-1"></div>
+           <div class="img-2"></div>
+            <div class="line" >
+             <div class="arrow">
+
+             </div>
+         </div>
+        </div>
+    </div>
+</body>
+<script>
+ const thumb = document.querySelector(".bar .thumb");
+   const line = document.querySelector(".line");
+   const img = document.querySelector(".container .img-2");
+   line.style.left="232px";
+   thumb.oninput = ()=>{
+       let val = thumb.value;
+       console.log(val);
+       line.style.left=val + "%";
+       img.style.width=val + "%";
+   }
+</script>
+</html>
