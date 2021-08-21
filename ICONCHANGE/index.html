@@ -1,71 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Icon Change</title>
     <style>
-  *{
-      padding: 0;
-      box-sizing: border-box;
-      margin: 0;
-  }
-  body{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 500px;
-  }
-  .container{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: 500px;
-      width: 500px;
-      justify-content: space-around;
-      background-color: brown;
-  }
-  .icon{
-    height: 300px;
-      width: 300px;
-      background-color: green;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      overflow: hidden;
-
-  }
-  .icon .image{
-      height: 300px;
-      width: 300px;
-   transition: 1s;
-
-  }
-  .range{
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      color: white;
-      font-size: 20px;
-      font-family: tahoma;
-      padding: 0px 20px;
-  }
-  .range input{
-      width: 350px;
-  }
-  .describe{
-    width: 100%;
-      display: flex;
-      justify-content: space-around;
-  }
-  .describe input{
-      width: 300px;
-      cursor: pointer;
-
-  }
-  /* .range input{
+      * {
+        padding: 0;
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 500px;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 500px;
+        width: 500px;
+        justify-content: space-around;
+      }
+      .icon {
+        height: 300px;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .icon .image {
+        height: 300px;
+        width: 300px;
+        transition: 1s;
+      }
+      .range {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        color: white;
+        font-size: 20px;
+        font-family: tahoma;
+        padding: 0px 20px;
+      }
+      .range input {
+        width: 350px;
+      }
+      .describe {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+      .describe input {
+        width: 300px;
+        cursor: pointer;
+      }
+      /* .range input{
     -webkit-appearance: none;
     appearance: none;
   width: 350px;
@@ -82,111 +77,115 @@
   background: #04AA6D;
   cursor: pointer;
 } */
-#points {
-  -webkit-appearance: none;
-  width:350px;
-  height: 25px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  border-radius: 15px;
-}
-#points::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  background: #04AA6D;
-  cursor: pointer;
-  border-radius: 50%;
-  /* border: solid 1px green; */
-}
-.angry{
-    background-color: rgb(255, 17, 0) !important;
-    transition: 1s;
-}
-.annoyed{
-    background-color: rgb(255, 145, 0) !important;
-    transition: 1s;
-}
-.normal{
-    background-color: rgb(217, 255, 0) !important;
-    transition: 1s;
-}
-.fun{
-    background-color: rgb(69, 218, 0) !important;
-    transition: 1s;
-}
-.love{
-    background-color: green !important;
-    transition: 1s;
-
-}
+      #points {
+        -webkit-appearance: none;
+        width: 350px;
+        height: 25px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: 0.2s;
+        transition: opacity 0.2s;
+        border-radius: 15px;
+      }
+      #points::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        background: #04aa6d;
+        cursor: pointer;
+        border-radius: 50%;
+        /* border: solid 1px green; */
+      }
+      .angry {
+        background-color: rgb(255, 17, 0) !important;
+        transition: 1s;
+      }
+      .annoyed {
+        background-color: rgb(255, 145, 0) !important;
+        transition: 1s;
+      }
+      .normal {
+        background-color: rgb(217, 255, 0) !important;
+        transition: 1s;
+      }
+      .fun {
+        background-color: rgb(69, 218, 0) !important;
+        transition: 1s;
+      }
+      .love {
+        background-color: green !important;
+        transition: 1s;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="icon">
-            <img class="image" src="https://cdn.iconscout.com/icon/free/png-256/angry-face-14-894765.png" alt="">
-            <img class="image" src="pngegg.png" alt="">
-            <img class="image" src="binhthuong.png" alt="">
-            <img class="image" src="Funy.png" alt="">
-            <img class="image" src="Love.png" alt="">
-           
-        </div>
-        <div class="range">
-            <div class="mIn"><p>0</p></div>
-            <input type="range"  class="" id="points" name="points" min="0" max="100"  >
-            <div class="mAx"><p>100</p></div>
-        </div>
-        <div class="describe">
-            <input type="submit" value="Tức giận">
-            <input type="submit" value="Bực">
-            <input type="submit" value="Bình thường">
-            <input type="submit" value="Khá vui">
-            <input type="submit" value="Cực kỳ vui">
-            
-        </div>
+      <div class="icon">
+        <img
+          class="image"
+          src="https://cdn.iconscout.com/icon/free/png-256/angry-face-14-894765.png"
+          alt=""
+        />
+        <img class="image" src="pngegg.png" alt="" />
+        <img class="image" src="binhthuong.png" alt="" />
+        <img class="image" src="Funy.png" alt="" />
+        <img class="image" src="Love.png" alt="" />
+      </div>
+      <div class="range">
+        <div class="mIn"><p>0</p></div>
+        <input
+          type="range"
+          class=""
+          id="points"
+          name="points"
+          min="0"
+          max="100"
+        />
+        <div class="mAx"><p>100</p></div>
+      </div>
+      <div class="describe">
+        <input type="submit" value="Tức giận" />
+        <input type="submit" value="Bực" />
+        <input type="submit" value="Bình thường" />
+        <input type="submit" value="Khá vui" />
+        <input type="submit" value="Cực kỳ vui" />
+      </div>
     </div>
-</body>
-<script>
- var val = document.querySelector("input[type='range']");
- var images = document.querySelectorAll(".image");
- var point=document.querySelector("#points");
- images[0].style.marginTop="-600px";
- point.classList.add("normal");
- val.addEventListener("input",function(){
-     var num=val.value;
-    if (num>=20&&num<40) {
-        images[0].style.marginTop="-300px";
+  </body>
+  <script>
+    var val = document.querySelector("input[type='range']");
+    var images = document.querySelectorAll(".image");
+    var point = document.querySelector("#points");
+    images[0].style.marginTop = "-600px";
+    point.classList.add("normal");
+    val.addEventListener("input", function () {
+      var num = val.value;
+      if (num >= 20 && num < 40) {
+        images[0].style.marginTop = "-300px";
         point.classList.add("annoyed");
         point.classList.remove("normal");
         point.classList.remove("angry");
-        
-    }else if (num<20) {
-        images[0].style.marginTop="0px";
+      } else if (num < 20) {
+        images[0].style.marginTop = "0px";
         point.classList.add("angry");
         point.classList.remove("annoyed");
-
-    }else if(num>=40 && num <=60){
-        images[0].style.marginTop="-600px";
+      } else if (num >= 40 && num <= 60) {
+        images[0].style.marginTop = "-600px";
         point.classList.add("normal");
         point.classList.remove("annoyed");
         point.classList.remove("fun");
-
-    }else if(num>60 && num <=80){
-        images[0].style.marginTop="-900px";
+      } else if (num > 60 && num <= 80) {
+        images[0].style.marginTop = "-900px";
         point.classList.add("fun");
         point.classList.remove("normal");
         point.classList.remove("love");
-    }else if(num>80 && num <=100){
-        images[0].style.marginTop="-1200px";
+      } else if (num > 80 && num <= 100) {
+        images[0].style.marginTop = "-1200px";
         point.classList.add("love");
         point.classList.remove("fun");
-      
-    }
- });
-</script>
+      }
+    });
+  </script>
 </html>
